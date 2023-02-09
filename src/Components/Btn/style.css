@@ -1,0 +1,12 @@
+
+.button{
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+}
+@media screen and (min-width: 728px) {
+    
+  }
+  @media screen and (min-width: 998px) {
+    
+  }

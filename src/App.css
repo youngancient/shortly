@@ -1,0 +1,30 @@
+
+.desktop{
+  display: none;
+}
+a{
+  text-decoration: none;
+}
+button{
+  outline: 0;
+  border: 0;
+  background: hsl(180, 66%, 49%);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover{
+  background: hsla(180, 66%, 49%,0.65);
+}
+@media screen and (min-width: 728px) {
+  .desktop{
+    display: flex;
+  }
+  .mobile{
+    display: none;
+  }
+}
+@media screen and (min-width: 998px) {
+  
+}
+

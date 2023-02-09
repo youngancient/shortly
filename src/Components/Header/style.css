@@ -1,0 +1,124 @@
+
+.bdr{
+    border: 1px solid black;
+}
+header{
+    width: 100vw;
+}
+.header{
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem;
+    background: hsla(257, 27%, 26%,0.25);
+    z-index: 10;
+}
+.slidein{
+    background: hsl(257, 27%, 26%);
+    padding: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 8px;
+}
+.secnd{
+    margin-top: 1.5rem;
+}
+.slidein a{
+    color: #fff;
+}
+.a, hr{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.menu{
+    transition: 1s;
+    
+}
+hr{
+    border: 1px solid hsla(0, 0%, 75%,0.5);
+}
+.a:first-of-type{
+    margin-top: 0;
+}
+.m-btn{
+    width: 100%;
+    margin-top: 1.5rem;
+}
+.m-btn button{
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+}
+@media screen and (min-width: 728px) {
+    .header{
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+    .not-logo{
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+    }
+    .not-logo a{
+        color: hsl(257, 7%, 63%);
+    }
+    .not-logo a:hover{
+        color: hsl(255, 11%, 22%);
+    }
+    .d-links2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .desktop-links{
+        display: flex;
+        align-items: center;
+    }
+    .desktop-links a{
+        margin-left: 1rem;
+    }
+    .desktop-links a:first-of-type{
+        margin-left: 0;
+    }
+    .d-links2 .btn{
+        margin-left: 1.5rem;
+    }
+    .d-links2 button{
+        width: 130px;
+        height: 45px;
+        border-radius: 20px;
+    }
+}
+@media screen and (min-width: 998px) {
+    .header{
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .not-logo{
+        width: 85%;
+    }
+    .desktop-links a{
+        margin-left: 3rem;
+    }
+    .desktop-links a:first-of-type{
+        margin-left: 0;
+    }
+    .d-links2 .btn{
+        margin-left: 2rem;
+    }
+}
