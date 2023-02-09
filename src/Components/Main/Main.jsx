@@ -33,17 +33,19 @@ const Main = () => {
           <div className="shorten bdr">
             <form className="">
               <div className="cont">
-                <input
-                  type="url"
-                  name="url"
-                  id=""
-                  placeholder="shorten a link here"
-                />
+                <div className="input">
+                  <input
+                    type="url"
+                    name="url"
+                    id=""
+                    placeholder="shorten a link here"
+                  />
+                </div>
                 <div className="short-btn">
                   <button type="submit">Shorten It!</button>
                 </div>
               </div>
-              <p className="error">Please add a link</p>
+              {/* <p className="error">Please add a link</p> */}
             </form>
           </div>
           <div className="short-links">

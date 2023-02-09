@@ -1,5 +1,6 @@
 import "./style.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const headerVariants = {
   initial: {
@@ -52,6 +53,17 @@ const Header = ({ setClick, isClicked }) => {
   const handleClick = () => {
     setClick(!isClicked);
   };
+  let menuRef = useRef();
+  useEffect(()=>{
+    let handler =(e)=>{
+      if(menuRef.current != undefined){
+        if(!menuRef.current.contains(e.target)){
+          setClick(false);
+        }
+      }
+    };
+    document.addEventListener("mousedown", handler);
+  })
   return (
     <header className="">
       <motion.div
@@ -90,7 +102,7 @@ const Header = ({ setClick, isClicked }) => {
           >
             <path
               fill="#242A45"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z"
             />
           </svg>
@@ -103,15 +115,15 @@ const Header = ({ setClick, isClicked }) => {
             variants={popupVariants}
             initial="initial"
             animate="final"
-            onClick={handleClick}
             exit="exit"
             key="hinokami"
-          >
+            >
             <motion.div
               className="slidein"
               variants={slideinVariants}
               initial="initial"
               animate="final"
+              ref={menuRef}
               exit="exit"
               key="kagura"
             >
