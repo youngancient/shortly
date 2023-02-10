@@ -29,8 +29,8 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <div className="second pad">
-          <div className="shorten bdr">
+        <div className="second pad bdr">
+          <div className="shorten">
             <form className="">
               <div className="cont">
                 <div className="input">
@@ -41,15 +41,30 @@ const Main = () => {
                     placeholder="shorten a link here"
                   />
                 </div>
+                {/* <p className="error mobile">Please add a link</p> */}
                 <div className="short-btn">
                   <button type="submit">Shorten It!</button>
                 </div>
               </div>
-              {/* <p className="error">Please add a link</p> */}
+              {/* <p className="error desktop">Please add a link</p> */}
             </form>
           </div>
-          <div className="short-links">
-            <Link />
+            <div className="short-links">
+              <Link />
+              <Link />
+              <Link />
+            </div>
+          <div className="below-shorten">
+            <div className="bs1">
+            <h3>Advanced Statistics</h3>
+            <p>
+              Track how your links are performing across the web with our
+              advanced statistics dashboard.
+            </p>
+            </div>
+            <div className="bs2">
+              components here
+            </div>
           </div>
         </div>
       </div>

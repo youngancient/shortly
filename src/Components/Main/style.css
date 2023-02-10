@@ -44,6 +44,48 @@ main{
   .hero-btn{
     margin-top: 1.5rem;
   }
+  form{
+    padding: 1rem;
+    background-color: hsl(257, 27%, 26%);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-image: url(/assets/bg-shorten-mobile.svg);
+    border-radius: 8px;
+  }
+  input{
+    height: 50px;
+    width: 100%;
+    padding: 1rem;
+    outline: 0;
+    border: 0;
+    border-radius: 8px;
+  }
+  .short-btn button{
+    width: 100%;
+    border-radius: 8px;
+    height: 50px;
+  }
+  .short-btn{
+    margin-top: 1.5rem;
+  }
+  .error{
+    margin-top: 0.5rem;
+    color: red;
+    text-align: center;
+  }
+  form .cont{
+    display: flex;
+    flex-direction: column;
+  }
+  .shorten{
+    margin-top: -40%;
+  }
+  .short-links{
+    margin-top: 2rem;
+  }
 @media screen and (min-width: 728px) {
     .main {
         margin-top: 2rem;
@@ -86,14 +128,14 @@ main{
   form{
     padding: 2rem;
     background-image: url(/assets/bg-shorten-desktop.svg);
-    background-color: hsl(257, 27%, 26%);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
   }
   form .cont{
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    flex-direction: row;
   }
   .input{
     width: 72%;
@@ -101,20 +143,12 @@ main{
   .short-btn{
     width: 25%;
   }
-  input{
-    height: 50px;
-    width: 100%;
-    padding: 1rem;
-    outline: 0;
-    border: 0;
-    border-radius: 8px;
-  }
   .short-btn{
     display: flex;
+    margin-top: 0;
   }
-  .short-btn button{
-    width: 100%;
-    border-radius: 8px;
+  .shorten{
+    margin-top: -13%;
   }
 }
 @media screen and (min-width: 998px) {
@@ -141,5 +175,8 @@ main{
     padding: 3rem;
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+  .shorten{
+    margin-top: -7%;
   }
 }
