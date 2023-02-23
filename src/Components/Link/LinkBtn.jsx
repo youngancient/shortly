@@ -1,9 +1,9 @@
 import "./style.css";
 
-const LinkButton =()=>{
+const LinkButton =({isCopied, handleCopy})=>{
     return(
-        <button>
-            Copy
+        <button onClick={handleCopy} className={isCopied ? 'dark' : ''}>
+            {isCopied ? 'Copied!' : 'Copy'}
         </button>
     )
 }

@@ -1,20 +1,27 @@
 import LinkButton from "./LinkBtn";
 import "./style.css";
+import { useState } from "react";
 
-const Link = () => {
+
+const Link = ({prevLink , newLink}) => {
+  const [isCopied, setIsCopied] = useState(false);
+  const handleCopy = (e)=>{
+    setIsCopied(true);
+
+  }
   return (
-    <div className="link bdr">
-      <div className="l-one bdr">
+    <div className="link">
+      <div className="l-one">
         <p>
-          preVious link preVious link preVious link preVious link preVious link
+          { prevLink }
         </p>
       </div>
-      <div className="l-two bdr">
+      <div className="l-two">
         <a href="#" className="">
-          shortened link shortened link shortened link
+          { newLink }
         </a>
         <div className="link-btn">
-          <LinkButton />
+          <LinkButton isCopied={isCopied} handleCopy={handleCopy} />
         </div>
       </div>
     </div>

@@ -13,8 +13,14 @@ button{
   cursor: pointer;
   font-weight: 600;
 }
+.dark{
+  background-color: hsl(257, 27%, 26%);
+}
 button:hover{
   background-color: hsla(180, 66%, 49%,0.65);
+}
+.dark:hover{
+  background-color: hsl(257, 27%, 26%);
 }
 @media screen and (min-width: 728px) {
   .desktop{
