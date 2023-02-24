@@ -1,8 +1,8 @@
 import "./style.css";
 const Stat = ({ img, alt, head, text }) => {
   return (
-    <div className="stat bdr">
-      <div className="img bdr">
+    <div className="stat">
+      <div className="img">
         <img src={img} alt={alt} className="" />
       </div>
       <div className="b">

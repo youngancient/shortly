@@ -75,7 +75,7 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <div className="second pad bdr">
+        <div className="second pad">
           <div className="shorten">
             <form className="">
               <div className="cont">
@@ -114,9 +114,23 @@ const Main = () => {
             </div>
             <div className="bs2 bdr">
               {statData.map((stat) => (
-                <Stat img={stat.imgSrc} alt={stat.alt} head={stat.head} text={stat.text} key={stat.id}/>
+                <Stat
+                  img={stat.imgSrc}
+                  alt={stat.alt}
+                  head={stat.head}
+                  text={stat.text}
+                  key={stat.id}
+                />
               ))}
             </div>
+          </div>
+        </div>
+        <div className="third">
+          <h3>Boost your links today</h3>
+          <div className="third-btn">
+            <a href="#" className="">
+              <Button />
+            </a>
           </div>
         </div>
       </div>

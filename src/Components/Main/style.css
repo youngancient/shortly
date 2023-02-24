@@ -110,6 +110,10 @@ main{
     display: flex;
     flex-direction: column;
   }
+  .third{
+    display: flex;
+    flex-direction: column;
+  }
 @media screen and (min-width: 728px) {
     .main {
         margin-top: 2rem;
