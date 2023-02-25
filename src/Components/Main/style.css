@@ -40,6 +40,7 @@ main{
   .second{
     background: hsl(0, 0%, 75%);
     margin-top: 10rem;
+    padding-bottom: 5rem;
   }
   .hero-btn{
     margin-top: 1.5rem;
@@ -113,6 +114,20 @@ main{
   .third{
     display: flex;
     flex-direction: column;
+    background-image: url(/assets/bg-boost-mobile.svg);
+    background-color: hsl(257, 27%, 26%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .third h3{
+    color: #fff;
+  }
+  .third-btn{
+    margin-top: 1rem;
   }
 @media screen and (min-width: 728px) {
     .main {
@@ -139,6 +154,9 @@ main{
   .text{
     display: block;
     text-align: left;
+  }
+  .second{
+    padding-bottom: 4rem;
   }
   h1{
     font-size: 3rem;
@@ -192,6 +210,9 @@ main{
     flex-direction: row;
     justify-content: space-between;
   }
+  .third{
+    background-image: url(/assets/bg-boost-desktop.svg);
+  }
 }
 @media screen and (min-width: 998px) {
   .pad,.hero {
@@ -226,5 +247,14 @@ main{
   }
   .bs1 p{
     width: 50%;
+  }
+  .second{
+    padding-bottom: 6rem;
+  }
+  .third{
+    padding: 3rem;
+  }
+  .third-btn button{
+    width: 200px;
   }
 }

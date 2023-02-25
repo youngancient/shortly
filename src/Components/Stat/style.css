@@ -63,11 +63,15 @@
         line-height: 1.5rem;
     }
   }
+  @media screen and (min-width: 819px) {
+    .stat{
+        height: 280px;
+    }
+  }
   @media screen and (min-width: 998px) {
     .stat{
         margin-left: 2.5rem;
         padding: 1.5rem;
-        /* width: 30%; */
         height: 220px;
         padding-bottom: 2rem;
     }

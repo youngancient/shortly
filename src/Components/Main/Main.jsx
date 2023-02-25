@@ -112,7 +112,7 @@ const Main = () => {
                 advanced statistics dashboard.
               </p>
             </div>
-            <div className="bs2 bdr">
+            <div className="bs2">
               {statData.map((stat) => (
                 <Stat
                   img={stat.imgSrc}

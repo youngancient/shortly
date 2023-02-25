@@ -1,7 +1,12 @@
 
 
-
-
+footer{
+    background: hsl(260, 8%, 14%);
+    color: #fff;
+}
+footer a{
+    color: #fff;
+}
 @media screen and (min-width: 728px) {
     
 }
