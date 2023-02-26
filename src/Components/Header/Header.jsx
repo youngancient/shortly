@@ -34,15 +34,18 @@ const popupVariants = {
 const slideinVariants = {
   initial: {
     y: "120vh",
+    scale : 0,
   },
   final: {
     y: "10vh",
+    scale : 1,
     transition: {
       duration: 1,
     },
   },
   exit: {
     y: "120vh",
+    scale : 0,
     transition: {
       duration: 1,
     },

@@ -1,15 +1,119 @@
-
-
-footer{
-    background: hsl(260, 8%, 14%);
-    color: #fff;
+footer {
+  background: hsl(260, 8%, 14%);
+  color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
-footer a{
-    color: #fff;
+footer a,
+footer i {
+  color: #fff;
+}
+footer i {
+  font-size: 1.5rem;
+}
+.fa a:hover {
+  color: hsl(180, 66%, 49%);
+}
+footer i:hover {
+  color: hsl(180, 66%, 49%);
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.socials {
+  margin-top: 2rem;
+}
+.socials a {
+  margin-left: 1rem;
+}
+.socials a:first-of-type {
+  margin-left: 0;
+}
+.footer-sub {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.footer-sub .f-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.f-links .fa {
+  margin-top: 0.75rem;
+}
+.f-links .fa:first-of-type {
+  margin-top: 0;
+}
+.fa a {
+  font-weight: 400;
+  color: hsl(257, 7%, 63%);
+}
+.f-head {
+  font-weight: 700;
 }
 @media screen and (min-width: 728px) {
-    
+  footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: unset;
+  }
+  .socials {
+    height: fit-content;
+    margin-top: 0;
+  }
+  .socials a {
+    margin-left: 0.5rem;
+  }
+  .socials a:first-of-type {
+    margin-left: 0;
+  }
+  .footer-sub {
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+    justify-content: unset;
+    margin-top: 0;
+  }
+  .footer-sub .f-links {
+    align-items: unset;
+    justify-content: unset;
+    margin-top: 0.5rem;
+  }
+  .f-links .fa {
+    margin-top: 0.75rem;
+  }
+  .f-links .fa:first-of-type {
+    margin-top: 0;
+  }
 }
 @media screen and (min-width: 998px) {
-  
+  footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .footer i {
+    margin-left: 1.5rem;
+  }
+  .footer-sub .f-links {
+    margin-top: 1.5rem;
+  }
+  .f-links .fa {
+    margin-top: 1.2rem;
+  }
+  .f-links .fa:first-of-type {
+    margin-top: 0;
+  }
 }

@@ -20,6 +20,9 @@
     display: flex;
     flex-direction: column;
 }
+.l-two a{
+    color: hsl(180, 66%, 49%);
+}
 .link-btn{
     margin-top: 1rem;
 }
@@ -34,8 +37,6 @@
         padding: 0.5rem;
         align-items: center;
         justify-content: space-between;
-        /* padding-top: 1rem;
-        padding-bottom: 1rem; */
         padding-left: 2rem;
         padding-right: 2rem;
     }

@@ -32,7 +32,7 @@
 }
 .stat .b h4{
     color: hsl(255, 11%, 22%);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .stat .img{
     margin-top: -20%;
@@ -61,6 +61,7 @@
     }
     .stat .b h4{
         line-height: 1.5rem;
+        font-size: 1.5rem;
     }
   }
   @media screen and (min-width: 819px) {
