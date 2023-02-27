@@ -56,6 +56,7 @@ For the social icons, you can either use the SVGs provided or a font icon librar
   Shorten It!
 
   Advanced Statistics
+  
 
   Track how your links are performing across the web with our 
   advanced statistics dashboard.

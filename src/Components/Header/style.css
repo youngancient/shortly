@@ -1,6 +1,6 @@
 
 .bdr{
-    border: 1px solid #fff;
+    border: 1px solid #000;
 }
 header{
     width: 100vw;
@@ -17,14 +17,14 @@ header{
     align-items: center;
 }
 .popup{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     padding: 1.5rem;
     background: hsla(257, 27%, 26%,0.25);
-    z-index: 10;
+    z-index: 5;
 }
 .slidein{
     background: hsl(257, 27%, 26%);
@@ -32,6 +32,7 @@ header{
     padding-top: 2rem;
     padding-bottom: 2rem;
     border-radius: 8px;
+    z-index: 10;
 }
 .secnd{
     margin-top: 1.5rem;

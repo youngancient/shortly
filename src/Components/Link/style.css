@@ -12,8 +12,13 @@
     border-radius: 8px;
 }
 .l-one{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid hsla(257, 27%, 26%,0.5);
     padding: 1rem;
+}
+.l-one p{
+    color: hsl(257, 27%, 26%);
+    width: 100%;
+    word-wrap: break-word;
 }
 .l-two{
     padding: 1rem;

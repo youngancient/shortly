@@ -9,15 +9,24 @@ const Link = ({prevLink , newLink}) => {
     setIsCopied(true);
 
   }
+  const truncate = (str, num) => {
+    return str.length > num ? str.substring(0, num) + "..." : str;
+  };
   return (
-    <div className="link">
+    <>
+    {
+      prevLink !== undefined
+      ?
+      <div className="link">
       <div className="l-one">
-        <p>
-          { prevLink }
+        <p className="">
+          { prevLink !== undefined
+          ? truncate(prevLink,65)
+        : "" }
         </p>
       </div>
       <div className="l-two">
-        <a href="#" className="">
+        <a href={newLink} className="" target="_blank">
           { newLink }
         </a>
         <div className="link-btn">
@@ -25,6 +34,9 @@ const Link = ({prevLink , newLink}) => {
         </div>
       </div>
     </div>
+    : <></>
+    }
+    </>
   );
 };
 

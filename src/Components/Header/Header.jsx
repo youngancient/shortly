@@ -80,7 +80,7 @@ const Header = ({ setClick, isClicked }) => {
         </div>
         <div className="not-logo desktop">
           <div className="desktop-links">
-            <a href="#" className="">
+            <a href="#stat" className="">
               Features
             </a>
             <a href="#" className="">
@@ -131,7 +131,7 @@ const Header = ({ setClick, isClicked }) => {
               key="kagura"
             >
               <div className="a">
-                <a href="#" className="">
+                <a href="#stat" className="">
                   Features
                 </a>
               </div>

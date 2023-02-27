@@ -3,27 +3,12 @@ import Link from "../Link/Link";
 import "./style.css";
 import { useState } from "react";
 import Stat from "../Stat/Stat";
+import { useForm } from "react-hook-form";
+import validator from "validator";
+import LinkList from "../LinkList/LinkList";
 
-const linkData = [
-  {
-    prevLink:
-      "preVious link preVious link preVious link preVious link preVious link",
-    newLink: "new link new link new link new link",
-    id: 1,
-  },
-  {
-    prevLink:
-      "preVious link preVious link preVious link preVious link preVious link",
-    newLink: "new link new link new link new link",
-    id: 2,
-  },
-  {
-    prevLink:
-      "preVious link preVious link preVious link preVious link preVious link",
-    newLink: "new link new link new link new link",
-    id: 3,
-  },
-];
+// const linkData = [
+// ];
 const statData = [
   {
     imgSrc: "/assets/recog.svg",
@@ -49,6 +34,35 @@ const statData = [
 ];
 
 const Main = () => {
+  const [url, setUrl] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [linkData, setLinkData] = useState([])
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    mode: "all",
+    defaultValues: {
+      url: "",
+    },
+  });
+  const onFormSubmit = (data) => {
+    setUrl(data.url);
+    setIsSubmitted(true);
+  };
+  const handleUrl = (e) => {
+    setUrl(e.target.value.trim());
+  };
+  const handleError = (errors) => {};
+  const validate = (url) => {
+    setUrl(url.trim());
+    if (validator.isURL(url)) {
+      return true;
+    } else {
+      return false;
+    }
+  };
   return (
     <main>
       <div className="main">
@@ -68,7 +82,7 @@ const Main = () => {
                 your links are performing.
               </p>
               <div className="hero-btn">
-                <a href="#" className="">
+                <a href="#shorten" className="">
                   <Button />
                 </a>
               </div>
@@ -76,36 +90,57 @@ const Main = () => {
           </div>
         </div>
         <div className="second pad">
-          <div className="shorten">
-            <form className="">
+          <div className="shorten" id="shorten">
+            <form onSubmit={handleSubmit(onFormSubmit, handleError)} noValidate>
               <div className="cont">
                 <div className="input">
                   <input
                     type="url"
                     name="url"
                     id=""
+                    value={url}
                     placeholder="shorten a link here"
+                    onChange={handleUrl}
+                    {...register("url", {
+                      required: true,
+                      validate: validate,
+                    })}
                   />
                 </div>
-                {/* <p className="error mobile">Please add a link</p> */}
+                {errors.url && errors.url.type === "required" && (
+                  <p className="error mobile">Please add a link!!</p>
+                )}
+                {errors.url && errors.url.type === "validate" && (
+                  <p className="error mobile">Invalid link!!</p>
+                )}
                 <div className="short-btn">
                   <button type="submit">Shorten It!</button>
                 </div>
               </div>
-              {/* <p className="error desktop">Please add a link</p> */}
+              {errors.url && errors.url.type === "required" && (
+                <p className="error desktop">Please add a link!!</p>
+              )}
+              {errors.url && errors.url.type === "validate" && (
+                <p className="error desktop">Invalid link!!</p>
+              )}
             </form>
           </div>
           <div className="short-links">
-            {linkData.map((link) => (
-              <Link
-                prevLink={link.prevLink}
-                newLink={link.newLink}
-                key={link.id}
-              />
-            ))}
+            {
+              linkData !== undefined ?
+              <LinkList
+              linkData={linkData}
+              url={url}
+              isSubmitted={isSubmitted}
+              setUrl={setUrl}
+              setIsSubmitted={setIsSubmitted}
+              setLinkData = {setLinkData}
+            />
+            : <></>
+            }
           </div>
           <div className="below-shorten">
-            <div className="bs1">
+            <div className="bs1" id="stat">
               <h3>Advanced Statistics</h3>
               <p>
                 Track how your links are performing across the web with our
@@ -128,7 +163,7 @@ const Main = () => {
         <div className="third">
           <h3>Boost your links today</h3>
           <div className="third-btn">
-            <a href="#" className="">
+            <a href="#shorten" className="">
               <Button />
             </a>
           </div>
