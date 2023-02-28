@@ -73,7 +73,7 @@ const Header = ({ setClick, isClicked }) => {
         className="header"
         variants={headerVariants}
         initial="initial"
-        animate="final"
+        animate= "final"
       >
         <div className="logo">
           <img src="/assets/logo.svg" alt="a logo" className="" />

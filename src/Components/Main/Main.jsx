@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import validator from "validator";
 import LinkList from "../LinkList/LinkList";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 // const linkData = [
 // ];
@@ -102,20 +103,22 @@ const Main = () => {
       return false;
     }
   };
+  const { ref: mainRef, inView} = useInView();
+
   return (
-    <main>
+    <main ref={mainRef}>
       <div className="main">
         <motion.div
           className="hero"
           variants={heroVariants}
           initial="initial"
-          animate="fHero"
+          animate={inView  ? "fHero" : ''}
         >
           <motion.div
             className="hero-img"
             variants={heroVariants}
             initial="left"
-            animate="final"
+            animate={inView  ? "final" : ''}
           >
             <img
               src="/assets/illustration-working.svg"
@@ -127,7 +130,7 @@ const Main = () => {
             className="hero-text"
             variants={heroVariants}
             initial="right"
-            animate="final"
+            animate={inView ? "final" :""}
           >
             <div className="text">
               <h1>More than just shorter links</h1>

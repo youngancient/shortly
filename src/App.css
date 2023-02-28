@@ -24,6 +24,14 @@ button:hover{
 .dark:hover{
   background-color: hsl(257, 27%, 26%);
 }
+.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: hsl(257, 27%, 26%);
+}
 @media screen and (min-width: 728px) {
   .desktop{
     display: flex;
