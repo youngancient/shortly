@@ -10,13 +10,12 @@ const LinkList = ({
   setLinkData,
 }) => {
   if (isSubmitted) {
-    console.log(isSubmitted, url);
+    
     useEffect(() => {
       axios
         .get(`https://api.shrtco.de/v2/shorten?url=${url}`)
         .then((res) => {
           setLinkData([...linkData, res.data.result]);
-          console.log(res.data.result);
         })
         .catch((err) => {
           console.log(err);
@@ -25,13 +24,13 @@ const LinkList = ({
     setUrl("");
     setIsSubmitted(false);
   }
-  return linkData.map((link) => (
+  return linkData.map((link, index) => (
     <>
       {linkData !== undefined ? (
         <Link
           prevLink={link.original_link}
           newLink={link.full_short_link}
-          key={link.code}
+          key={index}
         />
       ) : (
         <></>

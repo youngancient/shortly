@@ -32,6 +32,7 @@ main{
   .hero-text{
     display: flex;
     align-items: center;
+    overflow-x: hidden;
   }
   .text p{
     color: hsl(257, 7%, 63%);
@@ -87,6 +88,7 @@ main{
   }
   .short-links{
     margin-top: 2rem;
+    overflow-y: hidden;
   }
   .below-shorten{
     margin-top: 4rem;

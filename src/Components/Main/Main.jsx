@@ -6,6 +6,7 @@ import Stat from "../Stat/Stat";
 import { useForm } from "react-hook-form";
 import validator from "validator";
 import LinkList from "../LinkList/LinkList";
+import { motion } from "framer-motion";
 
 // const linkData = [
 // ];
@@ -33,10 +34,48 @@ const statData = [
   },
 ];
 
+const heroVariants = {
+  initial: {
+    opacity: 0,
+  },
+  fHero: {
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      duration: 1.5,
+    },
+  },
+  left: {
+    x: "-50px",
+  },
+  right: {
+    x: "50px",
+  },
+  final: {
+    x: 0,
+    transition: {
+      delay: 0.5,
+      duration: 1.5,
+      staggerChildren: 1,
+    },
+  },
+  slide :{
+    x: "100vw"
+  },
+  in : {
+    x: 0,
+    transition: {
+      delay: 2,
+      duration: 2.5,
+      type : "spring",
+      stiffness : 300
+    },
+  }
+};
 const Main = () => {
   const [url, setUrl] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [linkData, setLinkData] = useState([])
+  const [linkData, setLinkData] = useState([]);
   const {
     register,
     handleSubmit,
@@ -66,29 +105,49 @@ const Main = () => {
   return (
     <main>
       <div className="main">
-        <div className="hero">
-          <div className="hero-img">
+        <motion.div
+          className="hero"
+          variants={heroVariants}
+          initial="initial"
+          animate="fHero"
+        >
+          <motion.div
+            className="hero-img"
+            variants={heroVariants}
+            initial="left"
+            animate="final"
+          >
             <img
               src="/assets/illustration-working.svg"
               alt="hero work image"
               className=""
             />
-          </div>
-          <div className="hero-text">
+          </motion.div>
+          <motion.div
+            className="hero-text"
+            variants={heroVariants}
+            initial="right"
+            animate="final"
+          >
             <div className="text">
               <h1>More than just shorter links</h1>
               <p>
                 Build your brand’s recognition and get detailed insights on how
                 your links are performing.
               </p>
-              <div className="hero-btn">
+              <motion.div
+                className="hero-btn"
+                variants={heroVariants}
+                initial="slide"
+                animate="in"
+              >
                 <a href="#shorten" className="">
                   <Button />
                 </a>
-              </div>
+              </motion.div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         <div className="second pad">
           <div className="shorten" id="shorten">
             <form onSubmit={handleSubmit(onFormSubmit, handleError)} noValidate>
@@ -126,18 +185,18 @@ const Main = () => {
             </form>
           </div>
           <div className="short-links">
-            {
-              linkData !== undefined ?
+            {linkData !== undefined ? (
               <LinkList
-              linkData={linkData}
-              url={url}
-              isSubmitted={isSubmitted}
-              setUrl={setUrl}
-              setIsSubmitted={setIsSubmitted}
-              setLinkData = {setLinkData}
-            />
-            : <></>
-            }
+                linkData={linkData}
+                url={url}
+                isSubmitted={isSubmitted}
+                setUrl={setUrl}
+                setIsSubmitted={setIsSubmitted}
+                setLinkData={setLinkData}
+              />
+            ) : (
+              <></>
+            )}
           </div>
           <div className="below-shorten">
             <div className="bs1" id="stat">
