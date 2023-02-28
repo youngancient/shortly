@@ -8,18 +8,18 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 import { useInView } from "react-intersection-observer";
 
 const loaderVariant = {
-  exit:{
+  exit: {
     opacity: 0,
-    transition :{
-      duration : 2
-    }
-  }
-}
+    transition: {
+      duration: 2,
+    },
+  },
+};
 
 function App() {
   const [isClicked, setClick] = useState(false);
   const [isLoading, setLoading] = useState(true);
-  
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -39,10 +39,8 @@ function App() {
             <ScaleLoader color={"hsl(180, 66%, 49%)"} size={80} />
           </motion.div>
         ) : (
-          <motion.div className="app-main"
-          key= "kagura"
-          >
-            <Header setClick={setClick} isClicked={isClicked}  />
+          <motion.div className="" key="kagura">
+            <Header setClick={setClick} isClicked={isClicked} />
             <Main />
             <Footer />
           </motion.div>
