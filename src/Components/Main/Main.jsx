@@ -47,10 +47,10 @@ const heroVariants = {
     },
   },
   left: {
-    x: "-50px",
+    x: "-25%",
   },
   right: {
-    x: "50px",
+    x: "25%",
   },
   final: {
     x: 0,
