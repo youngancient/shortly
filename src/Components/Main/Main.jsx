@@ -42,7 +42,7 @@ const heroVariants = {
   fHero: {
     opacity: 1,
     transition: {
-      delay: 0.5,
+      delay: 0.8,
       duration: 1.5,
     },
   },
@@ -55,7 +55,7 @@ const heroVariants = {
   final: {
     x: 0,
     transition: {
-      delay: 0.5,
+      delay: 1,
       duration: 1.5,
       staggerChildren: 1,
     },

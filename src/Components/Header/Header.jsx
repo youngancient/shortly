@@ -131,7 +131,7 @@ const Header = ({ setClick, isClicked }) => {
               key="kagura"
             >
               <div className="a">
-                <a href="#stat" className="">
+                <a href="#stat" className="" onClick={handleClick}>
                   Features
                 </a>
               </div>
