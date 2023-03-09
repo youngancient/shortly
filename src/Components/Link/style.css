@@ -43,12 +43,12 @@
         padding: 0.5rem;
         align-items: center;
         justify-content: space-between;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     .l-one{
         border: none;
-        width: 60%;
+        width: 50%;
     }
     .l-two{
         display: flex;
@@ -65,5 +65,13 @@
     }
   }
   @media screen and (min-width: 998px) {
-    
+    .link{
+        padding: 0.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .l-one{
+        border: none;
+        width: 60%;
+    }
   }

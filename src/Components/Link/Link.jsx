@@ -35,7 +35,7 @@ const Link = ({ prevLink, newLink }) => {
         initial = "initial"
         animate = "final"
         >
-          <div className="l-one">
+          <div className="l-one bdr">
             <p className="">
               {prevLink !== undefined ? truncate(prevLink, 65) : ""}
             </p>
