@@ -112,13 +112,15 @@ const Main = () => {
           className="hero"
           variants={heroVariants}
           initial="initial"
-          animate={inView  ? "fHero" : ''}
+          whileInView= "fHero"
+          viewport={{once : true}}
         >
           <motion.div
             className="hero-img"
             variants={heroVariants}
             initial="left"
-            animate={inView  ? "final" : ''}
+            whileInView= "final"
+            viewport={{once : true}}
           >
             <img
               src="/assets/illustration-working.svg"
