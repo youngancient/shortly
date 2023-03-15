@@ -17,6 +17,7 @@ const LinkList = ({
         .get(`https://api.shrtco.de/v2/shorten?url=${url}`)
         .then((res) => {
           setLinkData([...linkData, res.data.result]);
+          console.log(res)
         })
         .catch((err) => {
           console.log(err);
